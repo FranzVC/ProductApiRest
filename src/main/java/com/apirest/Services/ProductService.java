@@ -2,7 +2,6 @@ package com.apirest.Services;
 
 import com.apirest.Models.Product;
 
-import java.util.List;
 
 public interface ProductService{
     Product save(Product product);
