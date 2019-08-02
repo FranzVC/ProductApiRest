@@ -1,20 +1,27 @@
 package com.apirest.Models;
 
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 
 @Entity
 @Table(name = "products")
+@ApiModel(description = "Details about a product")
 public class Product {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    @ApiModelProperty(notes = "the product Id")
     private Integer product_id;
 
     @NotNull
+    @ApiModelProperty(notes = "the product name")
     private String name;
 
     @NotNull
+    @ApiModelProperty(notes = "the product price")
     private float price;
 
     public Product() {
